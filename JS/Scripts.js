@@ -124,9 +124,18 @@ function showTab(tab) {
     else if (tab === "photos") {
         content.innerHTML = `
             <h2>Photos</h2>
-            <div class="photos-grid" id="photos-storage"></div>
+            <div class="photos-grid" id="photos-storage">
+                <!-- Fotos fijas -->
+                <img src="Assets/Metallica.jpeg" alt="Foto 1">
+                <img src="Assets/Omen.jpeg" alt="Foto 2">
+                <img src="Assets/descarga.jpeg" alt="Foto 3">
+                <img src="Assets/solo leveling Arise.jpeg" alt="Foto 4">
+                <img src="Assets/Pirlo 4_20 la rata.jpeg" alt="Foto 5">
+                <img src="Assets/Tokio.jpeg" alt="Foto 6">
+            </div>
         `;
 
+        // 🔥 Agregar fotos dinámicas desde los posts
         let photosSection = document.getElementById("photos-storage");
         posts.forEach(post => {
             if (post.image) {
@@ -149,3 +158,4 @@ function showTab(tab) {
 
 // Mostrar "Muro" por defecto
 window.onload = () => showTab("muro");
+
